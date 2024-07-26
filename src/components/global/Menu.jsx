@@ -224,7 +224,7 @@ export default function Menu() {
                     </Link>
                   </li>
                   <li>
-                    <Button />
+                    <Button text={'Kontaktai'}  bg={'#2E3192'}/>
                   </li>
                 </ul>
               </div>
