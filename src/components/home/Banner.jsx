@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Img from "../global/Img";
 import Button from "../global/Button";
 
 export default function Banner() {
