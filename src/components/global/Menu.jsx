@@ -31,7 +31,7 @@ export default function Menu() {
 
   return (
     <section className="relative z-50 bg-white">
-      <div className="max-w-screen-xl mx-auto px-4">
+      <div className="max-w-screen-xl mx-auto px-10">
         {/* Desktop Menu (Visible above 767px) */}
         {isDesktop ? (
           <div className="flex items-center justify-between">
@@ -48,7 +48,7 @@ export default function Menu() {
             </div>
             <div className="w-3/4">
               <div className="menu__items">
-                <ul className="flex items-center gap-[30px] justify-end">
+                <ul className="flex items-center gap-[26px] justify-end">
                   <li>
                     <Link className="text-[#14133B] text-[16px]" href="/">
                       Apie mus
@@ -224,7 +224,7 @@ export default function Menu() {
                     </Link>
                   </li>
                   <li>
-                    <Button text={'Kontaktai'}  bg={'#2E3192'}/>
+                    <Button text={'Kontaktai'}  bg={'bg-[#2E3192]'}/>
                   </li>
                 </ul>
               </div>
