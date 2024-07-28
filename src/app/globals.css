@@ -149,6 +149,11 @@ button {
   transform: translateY(-30px);
 }
 
+.bg-grad {
+  background: linear-gradient(90deg, #FFFFFF 0%, #F8F9FE 100%);
+  border: 1px solid #E1E3EF;
+
+}
 .border-right {
   position: relative;
 }
