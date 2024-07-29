@@ -150,9 +150,22 @@ button {
 }
 
 .bg-grad {
-  background: linear-gradient(90deg, #FFFFFF 0%, #F8F9FE 100%);
-  border: 1px solid #E1E3EF;
+  background: linear-gradient(90deg, #ffffff 0%, #f8f9fe 100%);
+  border: 1px solid #e1e3ef;
+}
 
+.apie-grad {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fe 100%);
+  border: 0.6px solid #E1E3EF;
+}
+
+.text-grad{
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAFBFF 100%);
+  border: 0.6px solid #E1E3EF;
+
+}
+.border-grad{
+  border: 0.6px solid #AAB3DB
 }
 .border-right {
   position: relative;

@@ -1,20 +1,51 @@
 import Link from "next/link";
-import TextWithImage from "./Padalinys/dynamic/TextWithImage";
+import TextWithImage from "./innerpageCommon/TextWithImage";
 import Address from "./Padalinys/dynamic/Address";
 import PlainText from "./Padalinys/dynamic/PlainText";
 import Textcard from "./Padalinys/dynamic/TextCard";
 import CommonSlider from "./Padalinys/dynamic/CommonSlider";
+import ListingWithIcon from "./apie/LisingWithIcon";
+import TextListing from "./apie/TextListing";
+import Accordion from "./apie/Accordion";
+import Blog from "./apie/Blog";
 
-
-export default function CommonLayout() {
-
+export default function CommonLayout({
+  menuList,
+  textWithDes,
+  textWithImage,
+  apie,
+  padalinys,
+  plainText
+}) {
   const slidesData = [
-    { image: "/image/dynamic/2.jpg", text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra" },
-    { image: "/image/dynamic/3.jpg", text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra" },
-    { image: "/image/dynamic/4.jpg", text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra" },
-    { image: "/image/dynamic/2.jpg", text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra" }
+    {
+      image: "/image/dynamic/2.jpg",
+      text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
+    },
+    {
+      image: "/image/dynamic/3.jpg",
+      text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
+    },
+    {
+      image: "/image/dynamic/4.jpg",
+      text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
+    },
+    {
+      image: "/image/dynamic/2.jpg",
+      text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
+    },
+    {
+      image: "/image/dynamic/4.jpg",
+      text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
+    },
+    {
+      image: "/image/dynamic/2.jpg",
+      text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
+    },
   ];
-  
+
+  console.log(plainText);
+
   return (
     <section>
       <div className="wrapper bg-[white] max-w-full px-20 py-[40px]">
@@ -22,14 +53,24 @@ export default function CommonLayout() {
           <div className="col-span-3">
             <div className="list border rounded-[10px]">
               <ul className="border-b-1">
-                <li className="border-b-[1px] py-[25px] pl-[25px] ">
+                {menuList?.length > 0 &&
+                  menuList?.map((item, idx) => (
+                    <li className="border-b-[1px] py-[25px] pl-[25px] ">
+                      <Link className="text-[#2E3192]" href={item?.url}>
+                        {item?.name}
+                      </Link>
+                    </li>
+                  ))}
+
+                {/* <li className="border-b-[1px] py-[25px] pl-[25px] ">
                   <Link className="text-[#2E3192]" href={"/"}>
-                    Ceikinių padalinys
+                   
                   </Link>
                 </li>
+
                 <li className="border-b-[1px] py-[25px] pl-[25px] ">
                   <Link className="text-[#14133B]" href={"/"}>
-                    Didžiasalis
+                    
                   </Link>
                 </li>
                 <li className="border-b-[1px] py-[25px] pl-[25px] ">
@@ -46,7 +87,7 @@ export default function CommonLayout() {
                   <Link className="text-[#14133B]" href={"/"}>
                     Lorem ipsum
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -102,19 +143,46 @@ export default function CommonLayout() {
             </div>
           </div>
           <div className="col-span-9">
-            <TextWithImage />
-            <Address />
-            <PlainText />
-            <Textcard />
+            <TextWithImage
+              textWithDes={textWithDes}
+              textWithImage={textWithImage}
+            />
+
+            {padalinys && (
+              <>
+                <Address />
+                <PlainText plainText={plainText} />
+                <Textcard />
+              </>
+            )}
+
+            {apie && (
+              <>
+                <ListingWithIcon />
+                <TextListing />
+                <Accordion />
+                <PlainText plainText={plainText} />
+              </>
+            )}
           </div>
         </div>
 
-        {/* slider starts */}
-
-
-        <CommonSlider title={'Kolektyvai'} data={slidesData} />
-        <CommonSlider title={'Naujienos'} data={slidesData} buttonText={" View Naujienos"} />
-    
+        {padalinys && (
+          <>
+            <CommonSlider title={"Kolektyvai"} data={slidesData} />
+            <CommonSlider
+              title={"Naujienos"}
+              data={slidesData}
+              buttonText={" View Naujienos"}
+            />
+          </>
+        )}
+        {apie && (
+          <>
+          
+          <Blog  data={slidesData} title={'Sąrašas'}/>
+          </>
+        )}
       </div>
     </section>
   );
