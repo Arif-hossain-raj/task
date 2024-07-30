@@ -7,25 +7,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import ImgBox from "@/components/ImgBox";
-import Button from "@/components/global/Button";
+import Image from "next/image";
 
 
 SwiperCore.use([Navigation, Pagination]);
 
-const CommonSlider = ({ title, buttonText, data }) => {
+const ImageSlider = ({data}) => {
   return (
     <section className=" pb-[100px] bg-white">
       <div className="wrapper max-w-screen-xl mx-auto px-10">
-        <div className="header flex justify-between items-center mb-[25px]">
-          <div className="text">
-            <h3>{title}</h3>
-          </div>
-          {buttonText && (
-            <div className="button">
-              <Button text={buttonText} bg="bg-[#2E3192]" svg />
-            </div>
-          )}
-        </div>
         <div className="relative ">
           <div className="nav-button absolute top-1/2 z-10 w-full">
             <ul className="flex justify-between w-full">
@@ -89,10 +79,7 @@ const CommonSlider = ({ title, buttonText, data }) => {
           >
             {data?.map((sliderData, idx) => (
               <SwiperSlide key={idx}>
-                <ImgBox
-                  image={sliderData?.image}
-                  text={sliderData?.text}
-                />
+                <Image src={sliderData?.image}  height={405} width={401}/>
               </SwiperSlide>
             ))}
 
@@ -104,4 +91,4 @@ const CommonSlider = ({ title, buttonText, data }) => {
   );
 };
 
-export default CommonSlider;
+export default ImageSlider;

@@ -8,6 +8,10 @@ import ListingWithIcon from "./apie/LisingWithIcon";
 import TextListing from "./apie/TextListing";
 import Accordion from "./apie/Accordion";
 import Blog from "./apie/Blog";
+import Contact from "./apie/Contact";
+import Image from "next/image";
+import Map from "./apie/Map";
+import ImageSlider from "./kolektyvas/ImageSlider";
 
 export default function CommonLayout({
   menuList,
@@ -15,7 +19,9 @@ export default function CommonLayout({
   textWithImage,
   apie,
   padalinys,
-  plainText
+  plainText,
+  kolektyvas,
+  pathanme,
 }) {
   const slidesData = [
     {
@@ -43,8 +49,32 @@ export default function CommonLayout({
       text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
     },
   ];
-
-  console.log(plainText);
+  const imageData = [
+    {
+      image: "/image/dynamic/2.jpg",
+    
+    },
+    {
+      image: "/image/dynamic/3.jpg",
+    
+    },
+    {
+      image: "/image/dynamic/4.jpg",
+    
+    },
+    {
+      image: "/image/dynamic/2.jpg",
+    
+    },
+    {
+      image: "/image/dynamic/4.jpg",
+    
+    },
+    {
+      image: "/image/dynamic/2.jpg",
+    
+    },
+  ];
 
   return (
     <section>
@@ -61,33 +91,6 @@ export default function CommonLayout({
                       </Link>
                     </li>
                   ))}
-
-                {/* <li className="border-b-[1px] py-[25px] pl-[25px] ">
-                  <Link className="text-[#2E3192]" href={"/"}>
-                   
-                  </Link>
-                </li>
-
-                <li className="border-b-[1px] py-[25px] pl-[25px] ">
-                  <Link className="text-[#14133B]" href={"/"}>
-                    
-                  </Link>
-                </li>
-                <li className="border-b-[1px] py-[25px] pl-[25px] ">
-                  <Link className="text-[#14133B]" href={"/"}>
-                    Dūkštas
-                  </Link>
-                </li>
-                <li className="border-b-[1px] py-[25px] pl-[25px] ">
-                  <Link className="text-[#14133B]" href={"/"}>
-                    Kaniūkai
-                  </Link>
-                </li>
-                <li className="border-b-[1px] py-[25px] pl-[25px] ">
-                  <Link className="text-[#14133B]" href={"/"}>
-                    Lorem ipsum
-                  </Link>
-                </li> */}
               </ul>
             </div>
 
@@ -146,6 +149,7 @@ export default function CommonLayout({
             <TextWithImage
               textWithDes={textWithDes}
               textWithImage={textWithImage}
+              pathanme={pathanme}
             />
 
             {padalinys && (
@@ -164,6 +168,21 @@ export default function CommonLayout({
                 <PlainText plainText={plainText} />
               </>
             )}
+
+            {kolektyvas && (
+              <>
+                <PlainText
+                  plainText={
+                    "„Ringė“ – nuolatinė Ignalinos miesto ir rajono švenčių bei koncertų dalyvė, jau aplankiusi visas rajono seniūnijas. Nuo 2018 m. dalyvauja Panevėžio miesto kapelijų konkurse „Kapelmaušis“, kur į Cido areną sukviečiamos pačios geriausios lietuvos kapelos. Dalyvavo Biržuose vykusiose kapelų varžytuvėse „Grok Jurgeli“, Širvintuose – „Būki svečias“, Utenoje – „Linksmoji armonika“, kur pelnė žiūrovų prizą, ir dar daug kitų miestų ir miestelių šventėse."
+                  }
+                />
+                <Image src={"/image/dynamic/13.jpg"} width={886} height={400} />
+                <PlainText
+                  plainText="Kapela yra nuolatinis tarptautinio festivalio „Ežerų sietuva“ dalyvis. Taip pat dalyvauja ir Dainų šventėse.
+Kapela „Ringė“garbingai atstovavo Lietuvai ir Ignalinos kraštui įvairiuose tarptautiniuose festivaliuose svetur: Italijoje, Čekijoje, Lenkijoje, Norvegijoje ie Makedonijoje."
+                />
+              </>
+            )}
           </div>
         </div>
 
@@ -179,11 +198,19 @@ export default function CommonLayout({
         )}
         {apie && (
           <>
-          
-          <Blog  data={slidesData} title={'Sąrašas'}/>
+            <Blog data={slidesData} title={"Sąrašas"} />
+            <Contact />
           </>
         )}
+
+        {kolektyvas && (
+          <ImageSlider data={imageData} />
+        )}
+
+
       </div>
+
+      {apie && <Map />}
     </section>
   );
 }

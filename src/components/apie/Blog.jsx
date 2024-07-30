@@ -5,7 +5,7 @@ const Blog = ({ title, data }) => {
   return (
     <section className=" pb-[100px] bg-white">
       <div className="wrapper max-w-screen-xl mx-auto px-10">
-        <div className="header flex justify-between items-center">
+        <div className="header flex justify-between items-center mb-[25px]">
           <div className="text">
             <h3>{title}</h3>
           </div>
