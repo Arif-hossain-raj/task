@@ -327,7 +327,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="right flex  justify-center items-center">
+        <div className="right  justify-center items-center">
           <h6 className="pb-[35px] font-[600] ">Apklausa</h6>
           <div className="wrapper">
             <p className="mb-[35px]">
@@ -338,7 +338,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="small ">
+      <div className="small flex justify-between">
         <div className="left flex gap-[45px] items-center">
           <h6 className="footer-font">Ignalinos rajono kultūros centras . Visos teisės saugomos</h6>
           <h6 className="footer-font">Slapukų parinktys</h6>

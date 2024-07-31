@@ -52,27 +52,21 @@ export default function CommonLayout({
   const imageData = [
     {
       image: "/image/dynamic/2.jpg",
-    
     },
     {
       image: "/image/dynamic/3.jpg",
-    
     },
     {
       image: "/image/dynamic/4.jpg",
-    
     },
     {
       image: "/image/dynamic/2.jpg",
-    
     },
     {
       image: "/image/dynamic/4.jpg",
-    
     },
     {
       image: "/image/dynamic/2.jpg",
-    
     },
   ];
 
@@ -188,11 +182,12 @@ Kapela „Ringė“garbingai atstovavo Lietuvai ir Ignalinos kraštui įvairiuos
 
         {padalinys && (
           <>
-            <CommonSlider title={"Kolektyvai"} data={slidesData} />
+            <CommonSlider title={"Kolektyvai"} data={slidesData} next={"next"}  priv={"priv"}/>
             <CommonSlider
               title={"Naujienos"}
               data={slidesData}
               buttonText={" View Naujienos"}
+              next={"next1"}  priv={"priv1"}
             />
           </>
         )}
@@ -203,11 +198,7 @@ Kapela „Ringė“garbingai atstovavo Lietuvai ir Ignalinos kraštui įvairiuos
           </>
         )}
 
-        {kolektyvas && (
-          <ImageSlider data={imageData} />
-        )}
-
-
+        {kolektyvas && <ImageSlider data={imageData} />}
       </div>
 
       {apie && <Map />}

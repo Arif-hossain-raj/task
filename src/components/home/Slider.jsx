@@ -5,7 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 import ImgBox from "../ImgBox";
 import Button from "../global/Button";
 
@@ -76,7 +77,7 @@ const SwiperSlider = () => {
                 prevEl: '#parenting-prev',
                 nextEl: '#parenting-next',
               }}
-            pagination={{ clickable: true }}
+            // pagination={{ clickable: true }}
             breakpoints={{
               414: {
                 slidesPerView: 1,

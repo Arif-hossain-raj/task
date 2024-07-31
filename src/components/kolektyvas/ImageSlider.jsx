@@ -5,7 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 import ImgBox from "@/components/ImgBox";
 import Image from "next/image";
 
@@ -88,7 +89,7 @@ const ImageSlider = ({data}) => {
                 spaceBetween: 40,
               },
             }}
-            pagination={{ clickable: true }}
+            // pagination={{ clickable: true }}
             className="my-6"
           >
             {data?.map((sliderData, idx) => (

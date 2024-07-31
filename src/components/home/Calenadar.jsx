@@ -5,9 +5,9 @@ const CalendarEvents = () => {
   return (
     <section className="relative">
       <div className="max-w-full  px-10 md:px-20 py-[71px] ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px]">
-          <div className=" bg-white shadow rounded-lg">
-            <div className="bg-[#2E3192] text-white rounded-t-lg px-[20px] py-[25px] flex justify-between">
+        <div className="grid grid-cols-12 gap-[60px]">
+          <div className=" bg-white shadow rounded-lg pb-[30px] col-span-10 md:col-span-5">
+            <div className="bg-[#2E3192] text-white rounded-[10px] px-[20px] py-[25px] mb-[30px] flex justify-between">
               <div className="text ">
                 <h4 className="text-lg">Gegužė</h4>
                 <p className="text-sm">Trečiadienis, 05-19</p>
@@ -47,7 +47,7 @@ const CalendarEvents = () => {
                 </ul>
               </div>
             </div>
-            <div className="grid grid-cols-7 gap-[6px] text-center mt-[20px] p-2">
+            <div className="grid grid-cols-7 gap-[0px] text-center mx-[30px]">
               <div>P</div>
               <div>A</div>
               <div>T</div>
@@ -58,22 +58,24 @@ const CalendarEvents = () => {
               {Array(30)
                 .fill("")
                 .map((_, i) => (
-                  <p
-                    key={i}
-                    className={`p-3 ${
-                      i === 18 ? "bg-indigo-700 text-white rounded-full" : ""
-                    }`}
-                  >
-                    {i + 1}
-                  </p>
+                  <div className="m-[5px] ">
+                    <p
+                      key={i}
+                      className={`m-1 p-1 w-[32px] ${
+                        i === 18 ? "bg-indigo-700 text-white rounded-full" : ""
+                      }`}
+                    >
+                      {i + 1}
+                    </p>
+                  </div>
                 ))}
             </div>
           </div>
 
-          <div className="">
+          <div className="col-span-10 md:col-span-7">
             <h3 className="text-[#14133B] mb-4">Renginiai</h3>
             <div className="space-y-4">
-              <div className="flex items-center bg-white shadow rounded-lg p-4">
+              <div className="flex items-center bg-white shadow rounded-[20px] p-4">
                 <div className="text-center p-4 rounded-lg">
                   <h3 className="text-[30px] text-center leading-[20px] text-[#2E3192] mb-[12px]">
                     19
@@ -138,7 +140,7 @@ const CalendarEvents = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center bg-white shadow rounded-lg p-4">
+              <div className="flex items-center bg-white shadow rounded-[20px] p-4">
                 <div className="text-center p-4 rounded-lg">
                   <h3 className="text-[30px] text-center leading-[20px] text-[#2E3192] mb-[12px]">
                     19

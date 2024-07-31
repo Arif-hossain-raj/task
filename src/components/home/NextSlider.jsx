@@ -5,7 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 import ImgBox from "../ImgBox";
 import Button from "../global/Button";
 import Image from "next/image";
@@ -27,7 +28,7 @@ const NextSlider = () => {
           <div className="text">
             <h3>Mūsų draugai ir partneriai</h3>
           </div>
-          <div className="nav-button">
+          <div className="nav-button z-10">
             <ul className="flex justify-between items-center gap-6 w-full">
               <li className="cursor-pointer" id="parenting-prev">
                 <svg
@@ -90,11 +91,11 @@ const NextSlider = () => {
                 spaceBetween: 30,
               },
               1024: {
-                slidesPerView: 4,
+                slidesPerView: 5,
                 spaceBetween: 40,
               },
             }}
-            pagination={{ clickable: true }}
+            // pagination={{ clickable: true }}
             
             className="my-6"
           >
