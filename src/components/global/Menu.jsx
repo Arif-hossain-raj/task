@@ -37,7 +37,7 @@ export default function Menu() {
           <div className="flex items-center justify-between">
             <div className="w-1/4">
               <div className="menu__logo">
-                <Link href='/'>
+                <Link href="/">
                   <img
                     src="/image/static/logo.png"
                     alt="Logo"
@@ -50,18 +50,24 @@ export default function Menu() {
               <div className="menu__items">
                 <ul className="flex items-center gap-[26px] justify-end">
                   <li>
-                    <Link className="text-[#14133B] text-[16px]" href="/">
+                    <Link className="text-[#14133B] text-[16px]" href="/apie">
                       Apie mus
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-[#14133B] text-[16px]" href="/">
-                      Renginiai
+                    <Link
+                      className="text-[#14133B] text-[16px]"
+                      href="/padalinys"
+                    >
+                      Padalinys
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-[#14133B] text-[16px]" href="/">
-                      Projektai
+                    <Link
+                      className="text-[#14133B] text-[16px]"
+                      href="/kolektyvas"
+                    >
+                      Kolektyvas
                     </Link>
                   </li>
 
@@ -224,7 +230,7 @@ export default function Menu() {
                     </Link>
                   </li>
                   <li>
-                    <Button text={'Kontaktai'}  bg={'bg-[#2E3192]'}/>
+                    <Button text={"Kontaktai"} bg={"bg-[#2E3192]"} />
                   </li>
                 </ul>
               </div>
