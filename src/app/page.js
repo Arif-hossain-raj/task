@@ -11,7 +11,7 @@ export default function Home() {
       <Banner />
       <SwiperSlider />
       <CalendarEvents />
-      {/* <SocialSection /> */}
+      <SocialSection />
       <NextSlider />
     </>
   );

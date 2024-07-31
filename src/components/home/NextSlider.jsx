@@ -23,7 +23,7 @@ const NextSlider = () => {
   
   return (
     <section className="pt-[100px] pb-[100px] bg-white relative">
-      <div className="wrapper max-w-screen-xl mx-auto px-10">
+      <div className="wrapper max-w-full  px-10 md:px-20">
         <div className="header flex justify-between items-center mb-[25px]">
           <div className="text">
             <h3>Mūsų draugai ir partneriai</h3>
@@ -86,7 +86,7 @@ const NextSlider = () => {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
-              768: {  // Changed to 768px for common breakpoints
+              768: { 
                 slidesPerView: 3,
                 spaceBetween: 30,
               },
@@ -95,7 +95,7 @@ const NextSlider = () => {
                 spaceBetween: 40,
               },
             }}
-            // pagination={{ clickable: true }}
+            
             
             className="my-6"
           >
