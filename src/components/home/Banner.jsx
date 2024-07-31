@@ -5,7 +5,7 @@ export default function Banner() {
   return (
     <section className="banner relative">
       <div className="wrapper custom-before">
-        <Image src="/image/dynamic/banner.jpg" height={585} width={1440} className=" h-[80vh] md:h-[100vh]" />
+        <Image src="/image/dynamic/banner.jpg" height={585} width={1440} className=" h-[80vh] md:h-[100vh] w-[100vw]" />
       </div>
       <div className="content  max-w-full mx-auto px-10 md:px-20">
         <div className="absolute top-1/4">

@@ -31,7 +31,7 @@ export default function Menu() {
 
   return (
     <section className="relative z-50 bg-white">
-      <div className="max-w-full px-10 md:px-20">
+      <div className="max-[100vh] px-10 md:px-20">
         {/* Desktop Menu (Visible above 767px) */}
         {isDesktop ? (
           <div className="flex items-center justify-between">
