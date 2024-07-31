@@ -17,7 +17,7 @@ export default function TextWithImage({
   console.log(isKole);
 
   return (
-    <div className="text-with-image grid grid-cols-2 gap-[75px]">
+    <div className="text-with-image grid grid-cols-1 md:grid-cols-2 gap-[75px]">
       {isKole ? (
         <div className="content ">
           <p className="">{textWithDes && textWithDes}</p>

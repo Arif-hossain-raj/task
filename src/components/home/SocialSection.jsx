@@ -4,13 +4,13 @@ import Button from "../global/Button";
 export default function SocialSection() {
   return (
     <section className="bg-white">
-      <div className="social max-w-screen-xl mx-auto px-10 pt-[120px]">
+      <div className="social max-w-full px-10 md:px-20 pt-[120px]">
         <div className="header grid grid-cols-12 mb-[60px]">
-          <div className="left flex flex-col justify-between gap-[22px] col-span-5">
+          <div className="left flex flex-col justify-between gap-[22px] col-span-12 mb-[10px]   md:col-span-5 ">
             <h3 className="leading-none">Apie mus</h3>
             <Button bg="bg-[#2E3192]" svg text={"Daugiau"} />
           </div>
-          <div className="right col-span-7">
+          <div className="right col-span-12 md:col-span-7">
             <p>
               Dabartinis Ignalinos rajono kultūros centras puoselėja, skleidžia
               įvairias kultūros sritis ir žanrus. Mūsų tikslas – puoselėti
@@ -27,8 +27,8 @@ export default function SocialSection() {
         <Image src={"/image/dynamic/social.jpg"} height={550} width={1440} />
 
         <div className=" max-w-screen-xl mx-auto px-10">
-          <div className="image-bottom w-[88vw] custom-gradient grid grid-cols-3 rounded-[10px]   ">
-            <div className="single py-[62px] px-[87px] border-right flex flex-col items-center">
+          <div className="image-bottom w-[88vw] custom-gradient grid grid-cols-1 md:grid-cols-3 rounded-[10px]   ">
+            <div className="single md:py-[62px] py-[20px] md:px-[87px] px-[20px]  border-right flex flex-col items-center">
               <div className="text">
                 <h4>Sekite mūsų naujienas</h4>
               </div>
@@ -47,7 +47,7 @@ export default function SocialSection() {
                 </svg>
               </div>
             </div>
-            <div className="single py-[62px] px-[87px] border-right flex flex-col items-center">
+            <div className="single md:py-[62px] py-[20px] md:px-[87px] px-[20px] border-right flex flex-col items-center">
               <div className="text">
                 <h4>Bendraukime Instagram</h4>
               </div>
@@ -81,7 +81,7 @@ export default function SocialSection() {
                 </svg>
               </div>
             </div>
-            <div className="single py-[62px] px-[87px] border-right flex flex-col items-center">
+            <div className="single md:py-[62px] py-[20px] md:px-[87px] px-[20px] border-right flex flex-col items-center">
               <div className="text">
                 <h4>Video įrašai</h4>
               </div>

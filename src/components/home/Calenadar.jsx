@@ -4,9 +4,9 @@ import Button from "../global/Button";
 const CalendarEvents = () => {
   return (
     <section className="relative">
-      <div className="max-w-screen-xl mx-auto px-10 py-[71px] ">
-        <div className="flex">
-          <div className="w-1/3 bg-white shadow rounded-lg">
+      <div className="max-w-full  px-10 md:px-20 py-[71px] ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px]">
+          <div className=" bg-white shadow rounded-lg">
             <div className="bg-[#2E3192] text-white rounded-t-lg px-[20px] py-[25px] flex justify-between">
               <div className="text ">
                 <h4 className="text-lg">Gegužė</h4>
@@ -70,7 +70,7 @@ const CalendarEvents = () => {
             </div>
           </div>
 
-          <div className="w-2/3 pl-[63px]">
+          <div className="">
             <h3 className="text-[#14133B] mb-4">Renginiai</h3>
             <div className="space-y-4">
               <div className="flex items-center bg-white shadow rounded-lg p-4">

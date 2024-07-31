@@ -4,8 +4,8 @@ export default function Address() {
       <div className="title mb-[20px]">
         <h3 className="text-[25px] leading-[26px]">Ema Trapikienė</h3>
       </div>
-      <div className="content flex items-center gap-[40px]">
-        <div className="single flex items-center gap-[10px]">
+      <div className="content flex flex-col md:flex-row  items-center gap-[40px]">
+        <div className="single flex flex-col md:flex-row items-center gap-[10px]">
           <div className="logo">
             <svg
               width="15"
@@ -27,7 +27,7 @@ export default function Address() {
             </p>
           </div>
         </div>
-        <div className="single flex items-center gap-[10px]">
+        <div className="single flex flex-col md:flex-row items-center gap-[10px]">
           <div className="logo">
             <svg
               width="17"
@@ -46,7 +46,7 @@ export default function Address() {
             <p className="font-[500]">+370 609 83 356</p>
           </div>
         </div>
-        <div className="single flex items-center gap-[10px]">
+        <div className="single flex flex-col md:flex-row items-center gap-[10px]">
           <div className="logo">
             <svg
               width="17"
@@ -65,7 +65,7 @@ export default function Address() {
             <p className="font-[500]">ema018@gmail.com</p>
           </div>
         </div>
-        <div className="single flex items-center gap-[10px]">
+        <div className="single flex flex-col md:flex-row items-center gap-[10px]">
           <div className="logo">
             <svg
               width="12"

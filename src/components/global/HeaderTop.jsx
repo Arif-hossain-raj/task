@@ -1,11 +1,9 @@
-"use client";
 
 import Link from "next/link";
-
 export default function HeaderTop() {
   return (
-    <section className="headerTop bg-[#2E3192] py-[10px]">
-      <div className="contain-wrapper max-w-screen-xl mx-auto px-10 flex justify-between items-center m-auto">
+    <section className="headerTop bg-[#2E3192] py-[10px] hidden md:block">
+      <div className="contain-wrapper max-w-full px-10 md:px-20 flex justify-between items-center m-auto">
       <div className="left flex items-center gap-[50px] ">
         <div className="single flex items-center gap-[8px]">
           <div className="icon">

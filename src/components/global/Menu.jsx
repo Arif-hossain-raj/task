@@ -10,7 +10,7 @@ export default function Menu() {
 
   useEffect(() => {
     const checkScreenWidth = () => {
-      setIsDesktop(window.innerWidth > 767);
+      setIsDesktop(window.innerWidth > 1191);
     };
 
     checkScreenWidth();
@@ -31,7 +31,7 @@ export default function Menu() {
 
   return (
     <section className="relative z-50 bg-white">
-      <div className="max-w-screen-xl mx-auto px-10">
+      <div className="max-w-full px-10 md:px-20">
         {/* Desktop Menu (Visible above 767px) */}
         {isDesktop ? (
           <div className="flex items-center justify-between">
@@ -257,8 +257,8 @@ export default function Menu() {
             </div>
 
             {mobileMenuOpen && (
-              <div className="absolute left-0 right-0 mt-4 bg-white shadow-lg rounded-md">
-                <ul className="flex flex-col gap-4 py-4">
+              <div className="absolute left-0 right-0 mt-0 bg-white shadow-lg rounded-md">
+                <ul className="flex flex-col items-center gap-4 py-4">
                   <li>
                     <Link className="text-[#14133B] text-[16px]" href="/">
                       Apie mus

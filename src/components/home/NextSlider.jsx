@@ -13,6 +13,13 @@ import Image from "next/image";
 SwiperCore.use([Navigation, Pagination]);
 
 const NextSlider = () => {
+
+  // useEffect(() => {
+  //   const swiper = document.querySelector('.swiper').swiper;
+  //   swiper.navigation.init();
+  //   swiper.navigation.update();
+  // }, []);
+  
   return (
     <section className="pt-[100px] pb-[100px] bg-white relative">
       <div className="wrapper max-w-screen-xl mx-auto px-10">
@@ -73,7 +80,22 @@ const NextSlider = () => {
               prevEl: "#parenting-prev",
               nextEl: "#parenting-next",
             }}
+            breakpoints={{
+              414: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {  // Changed to 768px for common breakpoints
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+            }}
             pagination={{ clickable: true }}
+            
             className="my-6"
           >
             <SwiperSlide>

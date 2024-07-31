@@ -74,6 +74,20 @@ const ImageSlider = ({data}) => {
               prevEl: "#parenting-prev",
               nextEl: "#parenting-next",
             }}
+            breakpoints={{
+              414: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {  // Changed to 768px for common breakpoints
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+            }}
             pagination={{ clickable: true }}
             className="my-6"
           >

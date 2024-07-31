@@ -80,7 +80,7 @@ export default function CommonLayout({
     <section>
       <div className="wrapper bg-[white] max-w-full px-20 py-[40px]">
         <div className="grid grid-cols-12 gap-[60px]">
-          <div className="col-span-3">
+          <div className="col-span-3 hidden md:block ">
             <div className="list border rounded-[10px]">
               <ul className="border-b-1">
                 {menuList?.length > 0 &&

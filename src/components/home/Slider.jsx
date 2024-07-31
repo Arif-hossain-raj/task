@@ -15,7 +15,7 @@ const SwiperSlider = () => {
 
   return (
     <section className="pt-[100px] pb-[100px] bg-white">
-      <div className="wrapper max-w-screen-xl mx-auto px-10">
+      <div className="wrapper max-w-full px-10 md:px-20">
         <div className="header flex justify-between items-center mb-25px">
           <div className="text">
             <h3>Naujienos</h3>
@@ -77,6 +77,20 @@ const SwiperSlider = () => {
                 nextEl: '#parenting-next',
               }}
             pagination={{ clickable: true }}
+            breakpoints={{
+              414: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {  // Changed to 768px for common breakpoints
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+            }}
             className="my-6"
           >
             <SwiperSlide>

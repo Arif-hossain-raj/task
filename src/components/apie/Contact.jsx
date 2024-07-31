@@ -10,7 +10,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="content grid grid-cols-4 gap-[18px]">
+        <div className="content grid grid-cols-2 md:grid-cols-4 gap-[18px]">
           <ContactBox
             image={"/image/dynamic/8.jpg"}
             name={"Asta Sieliūnienė"}

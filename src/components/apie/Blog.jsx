@@ -11,7 +11,7 @@ const Blog = ({ title, data }) => {
           </div>
           
         </div>
-        <div className="grid grid-cols-3 gap-[15px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[15px]">
           {data?.map((sliderData, idx) => (
             <div key={idx}>
               <ImgBox image={sliderData?.image} text={sliderData?.text} />
