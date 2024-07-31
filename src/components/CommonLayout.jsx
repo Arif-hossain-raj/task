@@ -79,7 +79,7 @@ export default function CommonLayout({
               <ul className="border-b-1">
                 {menuList?.length > 0 &&
                   menuList?.map((item, idx) => (
-                    <li className="border-b-[1px] py-[25px] pl-[25px] ">
+                    <li key={idx} className="border-b-[1px] py-[25px] pl-[25px] ">
                       <Link className="text-[#2E3192]" href={item?.url}>
                         {item?.name}
                       </Link>
