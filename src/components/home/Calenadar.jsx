@@ -58,7 +58,7 @@ const CalendarEvents = () => {
               {Array(30)
                 .fill("")
                 .map((_, i) => (
-                  <div className="m-[5px] ">
+                  <div className="m-[5px] "  key={i}>
                     <p
                       key={i}
                       className={`m-1 p-1 w-[32px] ${
