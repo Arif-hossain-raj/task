@@ -182,12 +182,11 @@ Kapela „Ringė“garbingai atstovavo Lietuvai ir Ignalinos kraštui įvairiuos
 
         {padalinys && (
           <>
-            <CommonSlider title={"Kolektyvai"} data={slidesData} next={"next"}  priv={"priv"}/>
+            <CommonSlider title={"Kolektyvai"} data={slidesData} />
             <CommonSlider
               title={"Naujienos"}
               data={slidesData}
               buttonText={" View Naujienos"}
-              next={"next1"}  priv={"priv1"}
             />
           </>
         )}
