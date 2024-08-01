@@ -25,7 +25,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
   return (
     <>
-      <BreadCrumb data={data} />
+      <BreadCrumb data={data} title={'Apie mus'} />
       <CommonLayout
         menuList={appieMenu}
         textWithDes={textWithDes}
