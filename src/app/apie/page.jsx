@@ -1,7 +1,7 @@
 import CommonLayout from "@/components/CommonLayout";
 import BreadCrumb from "@/components/innerpageCommon/BreadCrumb";
 
-export default function Padalinys() {
+export default function Apie() {
   // breadcrumb data
   const data = [
     { name: "Titulinis", url: "/" },

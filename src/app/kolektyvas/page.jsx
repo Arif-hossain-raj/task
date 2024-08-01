@@ -3,7 +3,7 @@ import CommonLayout from "@/components/CommonLayout";
 import BreadCrumb from "@/components/innerpageCommon/BreadCrumb";
 import { usePathname, useSearchParams } from 'next/navigation'
 
-export default function Padalinys() {
+export default function Kolektyvas() {
   const pathanme = usePathname();
 
   console.log(pathanme);
