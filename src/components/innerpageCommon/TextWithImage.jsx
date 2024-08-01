@@ -14,23 +14,21 @@ export default function TextWithImage({
     isKole = false;
   }
 
-  console.log(isKole);
-
   return (
     <div className="text-with-image grid grid-cols-1 md:grid-cols-2 gap-[75px]">
       {isKole ? (
         <div className="content ">
-          <p className="">{textWithDes && textWithDes}</p>
-          <div className="down   mt-[40px] flex items-center gap-[30px]">
-            <div className="left-image ">
-              <Image src={"/image/dynamic/12.jpg"} height={210} width={150} />
+          <p className="font-[400] text-[16px] leading-[25px]">{textWithDes && textWithDes}</p>
+          <div className="down mt-[40px] flex items-center gap-[30px]">
+            <div className="left-image">
+              <Image src={"/image/dynamic/12.jpg"} height={210} width={150} className="min-w-[150px] min-h-[210px]"  />
             </div>
 
             <div className="content">
-              <h5 className="mb-[8px] leading-[26px]">
+              <h5 className="mb-[8px] text-[18px] font-[600] leading-[26px]">
                 Frančeska Skačkauskienė
               </h5>
-              <p className="mb-[20px]">Direktorė</p>
+              <p className="mb-[20px]  text-[14px] font-[400] leading-[25px]">Direktorė</p>
 
               <div className="logotext mb-[12px] flex items-center gap-[13px] ">
                 <svg
@@ -45,7 +43,7 @@ export default function TextWithImage({
                     fill="#2E3192"
                   />
                 </svg>
-                <h5>+370 600 06 076</h5>
+                <h5 className="font-[500] text-[15px] leading-[22px]">+370 600 06 076</h5>
               </div>
               <div className="logotext mb-[12px] flex items-center gap-[13px] ">
                 <svg
@@ -60,18 +58,18 @@ export default function TextWithImage({
                     fill="#2E3192"
                   />
                 </svg>
-                <h5>franciskavas@gmail.com</h5>
+                <h5 className="font-[500] text-[15px] leading-[22px]">franciskavas@gmail.com</h5>
               </div>
             </div>
           </div>
         </div>
       ) : (
         <div className="text my-auto">
-          <p className="">{textWithDes && textWithDes}</p>
+          <p className="font-[400] text-[16px] leading-[25px]">{textWithDes && textWithDes}</p>
         </div>
       )}
 
-      <div className="image">
+      <div className="image ">
         <Image src={textWithImage && textWithImage} height={456} width={456} />
       </div>
     </div>

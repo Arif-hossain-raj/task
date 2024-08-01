@@ -4,7 +4,7 @@ export default function Map() {
   return (
     <section>
       <div className="img relative">
-        <Image src="/image/dynamic/10.jpg" width={1440} height={530} />
+        <Image src="/image/dynamic/10.jpg" width={1440} height={530} className="w-[100vw]" />
         <div className="logo absolute top-1/2 left-1/2">
         <svg
           width="31"

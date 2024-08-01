@@ -37,7 +37,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
   return (
     <>
-      <BreadCrumb data={data} />
+      <BreadCrumb data={data} title ={'Liaudiškos muzikos kapela „Ringė“'} />
       <CommonLayout
         menuList={appieMenu}
         textWithDes={textWithDes}

@@ -5,8 +5,8 @@ const CalendarEvents = () => {
   return (
     <section className="relative">
       <div className="max-w-full px-3 md:px-20 py-[71px] ">
-        <div className="grid grid-cols-12 gap-[60px]">
-          <div className=" bg-white shadow rounded-lg pb-[30px] col-span-10 md:col-span-5 md:w-full max-w-[414px]">
+        <div className="grid md:grid-cols-12 grid-cols-1 gap-[60px]">
+          <div className=" bg-white shadow rounded-lg pb-[30px] md:col-span-5 ">
             <div className="bg-[#2E3192] text-white rounded-[10px] px-[20px] py-[25px] mb-[30px] flex justify-between">
               <div className="text ">
                 <h4 className="text-lg">Gegužė</h4>
@@ -72,7 +72,7 @@ const CalendarEvents = () => {
             </div>
           </div>
 
-          <div className="col-span-10 md:col-span-7 md:w-full max-w-[414px]">
+          <div className="md:col-span-7">
             <h3 className="text-[#14133B] mb-4">Renginiai</h3>
             <div className="space-y-4">
               <div className="flex items-center bg-white shadow rounded-[20px] p-4">

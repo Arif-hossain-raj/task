@@ -12,7 +12,7 @@ consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porr
   const text3 = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
 Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.`;
   return (
-    <section className="my-[60px] flex items-center gap-[11px]">
+    <section className="my-[60px] grid grid-cols-3 gap-[11px]">
       <SingleTextCard text={text1} />
       <SingleTextCard text={text2} />
       <SingleTextCard text={text3} />

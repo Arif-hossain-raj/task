@@ -6,9 +6,9 @@ export default function ImgBox({image , text}) {
       <div className="image">
         <Image src={image} height={401} width={405} />
       </div>
-      <div className="content max-w-[360px] max-h-[120px] bg-[white] m-[20px] p-[27px] absolute bottom-0 flex items-center rounded-[10px]">
+      <div className="content max-w-[360px] h-[120px] bg-[white] m-[20px] p-[27px] absolute bottom-0 flex items-center gap-[30px] rounded-[10px]">
         <div className="text">
-          <h5>{text}</h5>
+          <h5 className="text-[18px] font-[600] leading-[26px]">{text}</h5>
         </div>
         <div className="svg">
           <svg

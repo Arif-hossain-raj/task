@@ -16,7 +16,7 @@ SwiperCore.use([Navigation, Pagination]);
 const ImageSlider = ({data}) => {
   return (
     <section className=" pb-[100px] bg-white">
-      <div className="wrapper max-w-screen-xl mx-auto px-10">
+      <div className="wrapper max-w-full ">
         <div className="relative ">
           <div className="nav-button absolute top-1/2 z-10 w-full">
             <ul className="flex justify-between w-full">
@@ -86,6 +86,10 @@ const ImageSlider = ({data}) => {
               },
               1024: {
                 slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              1500: {
+                slidesPerView: 4,
                 spaceBetween: 40,
               },
             }}

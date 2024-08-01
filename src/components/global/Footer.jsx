@@ -5,8 +5,8 @@ import Button from "./Button";
 export default function Footer() {
   return (
     <section className="footer max-w-full px-10 md:px-20 pt-[80px] pb-[25px]  bg-[#F8F9FE] ">
-      <div className="grid grid-cols-1 md:grid-cols-4 pb-[54px]">
-        <div className="left md:block flex flex-col justify-center items-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 pb-[54px]">
+        <div className="left md:block flex flex-col justify-center items-center mb-[20px]">
           <div className="logo mb-[28px] ">
             <Image
               src={"/image/static/footerlogo.png"}
@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="address  md:block flex flex-col justify-center items-center">
+        <div className="address  md:block flex flex-col justify-center items-center mb-[20px]">
           <h6 className="pb-[35px] font-[600] ">
             Ignalinos rajono kultūros centras
           </h6>
@@ -170,7 +170,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="Inform md:block flex flex-col justify-center items-center">
+        <div className="Inform md:block flex flex-col justify-center items-center mb-[20px]">
           <h6 className="pb-[35px] font-[600] ">
             Ignalinos rajono kultūros centras
           </h6>
@@ -327,7 +327,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="right  justify-center items-center">
+        <div className="right  justify-center items-center mb-[20px]">
           <h6 className="pb-[35px] font-[600] ">Apklausa</h6>
           <div className="wrapper">
             <p className="mb-[35px]">

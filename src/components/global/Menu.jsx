@@ -48,7 +48,7 @@ export default function Menu() {
             </div>
             <div className="w-3/4">
               <div className="menu__items">
-                <ul className="flex items-center gap-[26px] justify-end">
+                <ul className="flex items-center gap-[22px] justify-end">
                   <li>
                     <Link className="text-[#14133B] text-[16px]" href="/apie">
                       Apie mus

@@ -26,7 +26,7 @@ export default function SocialSection() {
       <div className="image relative">
         <Image src={"/image/dynamic/social.jpg"} height={550} width={1440} className="w-[100vw]" />
 
-        <div className=" max-w-full px-10 md:px-20">
+        <div className=" max-w-full w-fit mx-auto">
           <div className="image-bottom w-[88vw] custom-gradient grid grid-cols-1 md:grid-cols-3 rounded-[10px]   ">
             <div className="single md:py-[62px] py-[20px] md:px-[87px] px-[20px]  border-right flex flex-col items-center">
               <div className="text">

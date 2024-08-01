@@ -16,7 +16,7 @@ SwiperCore.use([Navigation, Pagination]);
 const CommonSlider = ({ title, buttonText, data }) => {
   return (
     <section className=" pb-[100px] bg-white">
-      <div className="wrapper max-w-screen-xl mx-auto px-10">
+      <div className="wrapper max-w-full">
         <div className="header flex justify-between items-center mb-[25px]">
           <div className="text">
             <h3>{title}</h3>
@@ -96,6 +96,10 @@ const CommonSlider = ({ title, buttonText, data }) => {
               },
               1024: {
                 slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              1500: {
+                slidesPerView: 4,
                 spaceBetween: 40,
               },
             }}

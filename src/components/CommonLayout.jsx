@@ -49,38 +49,96 @@ export default function CommonLayout({
       text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
     },
   ];
+  const Kolektyvai = [
+    {
+      image: "/image/dynamic/17.jpg",
+      text: "Muzikos mėgėjų folkloro kolektyvas „Serbenta”",
+    },
+    {
+      image: "/image/dynamic/18.jpg",
+      text: "Jaunimo ansamblis„DiVersa”",
+    },
+    {
+      image: "/image/dynamic/19.jpg",
+      text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
+    },
+    {
+      image: "/image/dynamic/2.jpg",
+      text: "Lorem ipsum dolor sit ametconsectetur ut nec venenatis",
+    },
+    {
+      image: "/image/dynamic/18.jpg",
+      text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
+    },
+    {
+      image: "/image/dynamic/17.jpg",
+      text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
+    },
+  ];
+  const blog = [
+    {
+      image: "/image/dynamic/20.jpg",
+      text: "Quis autem vel eumiure reprehenderit”",
+    },
+    {
+      image: "/image/dynamic/21.jpg",
+      text: "Lorem ipsum dolor sitamet, consecteturadipiscing elit",
+    },
+    {
+      image: "/image/dynamic/22.jpg",
+      text: "Excepteur sint occaecatcupidatat non proident",
+    },
+    {
+      image: "/image/dynamic/23.jpg",
+      text: "Lorem ipsum dolor sit ametconsectetur ut nec venenatis",
+    },
+    {
+      image: "/image/dynamic/24.jpg",
+      text: "Excepteur sint occaecatcupidatat non proident",
+    },
+    {
+      image: "/image/dynamic/25.jpg",
+      text: "Dokumentinio filmo „Nugalėti Galijotą” peržiūra",
+    },
+  ];
+
   const imageData = [
     {
-      image: "/image/dynamic/2.jpg",
+      image: "/image/dynamic/15.jpg",
     },
     {
-      image: "/image/dynamic/3.jpg",
+      image: "/image/dynamic/14.jpg",
     },
     {
-      image: "/image/dynamic/4.jpg",
+      image: "/image/dynamic/15.jpg",
     },
     {
-      image: "/image/dynamic/2.jpg",
+      image: "/image/dynamic/16.jpg",
     },
     {
-      image: "/image/dynamic/4.jpg",
-    },
-    {
-      image: "/image/dynamic/2.jpg",
+      image: "/image/dynamic/14.jpg",
     },
   ];
 
   return (
     <section>
-      <div className="wrapper bg-[white] max-w-full px-20 py-[40px]">
+      <div className="wrapper bg-[white] max-w-full px-10 md:px-20 py-[40px]">
         <div className="grid grid-cols-12 gap-[60px]">
           <div className="col-span-3 hidden md:block ">
             <div className="list border rounded-[10px]">
               <ul className="border-b-1">
                 {menuList?.length > 0 &&
-                  menuList?.map((item, idx) => (
-                    <li key={idx} className="border-b-[1px] py-[25px] pl-[25px] ">
-                      <Link className="text-[#2E3192]" href={item?.url}>
+                  menuList.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="border-b-[1px] py-[25px] pl-[25px]"
+                    >
+                      <Link
+                        className={`leading-[22px] font-[500] text-[18px] ${
+                          idx === 0 ? "text-[#2E3192]" : "text-[#14133B]"
+                        }`}
+                        href={item?.url}
+                      >
                         {item?.name}
                       </Link>
                     </li>
@@ -170,10 +228,16 @@ export default function CommonLayout({
                     "„Ringė“ – nuolatinė Ignalinos miesto ir rajono švenčių bei koncertų dalyvė, jau aplankiusi visas rajono seniūnijas. Nuo 2018 m. dalyvauja Panevėžio miesto kapelijų konkurse „Kapelmaušis“, kur į Cido areną sukviečiamos pačios geriausios lietuvos kapelos. Dalyvavo Biržuose vykusiose kapelų varžytuvėse „Grok Jurgeli“, Širvintuose – „Būki svečias“, Utenoje – „Linksmoji armonika“, kur pelnė žiūrovų prizą, ir dar daug kitų miestų ir miestelių šventėse."
                   }
                 />
-                <Image src={"/image/dynamic/13.jpg"} width={886} height={400} />
+                <Image
+                  src={"/image/dynamic/13.jpg"}
+                  width={886}
+                  height={400}
+                  className="w-full h-auto"
+                />
+
                 <PlainText
                   plainText="Kapela yra nuolatinis tarptautinio festivalio „Ežerų sietuva“ dalyvis. Taip pat dalyvauja ir Dainų šventėse.
-Kapela „Ringė“garbingai atstovavo Lietuvai ir Ignalinos kraštui įvairiuose tarptautiniuose festivaliuose svetur: Italijoje, Čekijoje, Lenkijoje, Norvegijoje ie Makedonijoje."
+                              Kapela „Ringė“garbingai atstovavo Lietuvai ir Ignalinos kraštui įvairiuose tarptautiniuose festivaliuose svetur: Italijoje, Čekijoje, Lenkijoje, Norvegijoje ie Makedonijoje."
                 />
               </>
             )}
@@ -182,7 +246,7 @@ Kapela „Ringė“garbingai atstovavo Lietuvai ir Ignalinos kraštui įvairiuos
 
         {padalinys && (
           <>
-            <CommonSlider title={"Kolektyvai"} data={slidesData} />
+            <CommonSlider title={"Kolektyvai"} data={Kolektyvai} />
             <CommonSlider
               title={"Naujienos"}
               data={slidesData}
@@ -192,7 +256,7 @@ Kapela „Ringė“garbingai atstovavo Lietuvai ir Ignalinos kraštui įvairiuos
         )}
         {apie && (
           <>
-            <Blog data={slidesData} title={"Sąrašas"} />
+            <Blog data={blog} title={"Sąrašas"} />
             <Contact />
           </>
         )}
