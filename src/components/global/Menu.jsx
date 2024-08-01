@@ -57,7 +57,7 @@ export default function Menu() {
                   <li>
                     <Link
                       className="text-[#14133B] text-[16px]"
-                      href="/padalinys"
+                      href="/route01"
                     >
                       Padalinys
                     </Link>

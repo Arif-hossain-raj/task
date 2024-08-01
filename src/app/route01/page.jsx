@@ -1,3 +1,4 @@
+'use cliet'
 import CommonLayout from "@/components/CommonLayout";
 import BreadCrumb from "@/components/innerpageCommon/BreadCrumb";
 
